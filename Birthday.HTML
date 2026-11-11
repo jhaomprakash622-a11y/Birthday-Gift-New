@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 24th Birthday Deesha! 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg,#ffb6d9,#d8b4fe,#ffc4e1);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #79275c;
+    text-align: center;
+}
+
+.screen {
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    animation: appear 1s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+@keyframes appear {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+h1 {
+    font-size: clamp(35px,7vw,65px);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+button {
+    background: #ff4f9a;
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-size: 18px;
+    border-radius: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px #d94c8b66;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #e62c83;
+}
+
+.emoji {
+    font-size: 90px;
+    margin: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    50% {transform:translateY(-15px);}
+}
+
+.card {
+    background: #ffffffcf;
+    padding: 35px;
+    border-radius: 30px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 10px 35px #9e367555;
+}
+
+.gift {
+    font-size: 120px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.gift:hover {
+    transform: rotate(-10deg) scale(1.15);
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.cake {
+    font-size: 110px;
+    margin: 20px;
+}
+
+.name {
+    color: #e72d88;
+    text-shadow: 2px 3px 5px #fff;
+}
+
+.small {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SCREEN 1 -->
+<section class="screen active" id="s1">
+    <div class="emoji">💗</div>
+    <h1>Heyyy Deesha Shah!</h1>
+    <p>
+        Someone has a very special day today...
+        And someone has a very special surprise waiting! 👀
+    </p>
+    <button onclick="next(2)">Click if you're ready ✨</button>
+</section>
+
+<!-- SCREEN 2 -->
+<section class="screen" id="s2">
+    <div class="emoji">🎁</div>
+    <h1>Waitttt a second!</h1>
+    <p>
+        Before we begin, I need you to promise
+        that you'll smile throughout this surprise! 🥹
+    </p>
+    <button onclick="next(3)">I Promise! 💕</button>
+</section>
+
+<!-- SCREEN 3 -->
+<section class="screen" id="s3">
+    <h1>Something is waiting for you...</h1>
+    <p>Tap the gift box below to unwrap your surprise!</p>
+    <div class="gift" onclick="next(4)">🎁</div>
+    <p class="small">Psst... Go on, click it! 👆</p>
+</section>
+
+<!-- SCREEN 4 -->
+<section class="screen" id="s4">
+    <div class="emoji">🎉</div>
+    <h1>HAPPY 24TH BIRTHDAY!</h1>
+    <h1 class="name">DEESHA SHAH 💗</h1>
+    <p>
+        24 looks absolutely magical on you!
+        Today is all about celebrating YOU! 🥳
+    </p>
+    <button onclick="next(5)">There's More... 👀</button>
+</section>
+
+<!-- SCREEN 5 -->
+<section class="screen" id="s5">
+    <div class="card">
+        <div class="cake">🎂</div>
+        <h2>Make a Wish, Birthday Girl! 🌟</h2>
+        <p>
+            24 candles, countless dreams and a whole new
+            chapter waiting to unfold.
+        </p>
+        <p>
+            Close your eyes, make a wish and blow out
+            those imaginary candles! 🕯️
+        </p>
+        <button onclick="next(6)">My Wish Is Made! 💫</button>
+    </div>
+</section>
+
+<!-- SCREEN 6 -->
+<section class="screen" id="s6">
+    <div class="card">
+        <h2>Dear Deesha, 💌</h2>
+        <p>
+            Happy 24th Birthday to you! ❤️
+            <br><br>
+            May this new chapter of your life be filled
+            with endless happiness, beautiful memories,
+            unexpected adventures and dreams coming true.
+            <br><br>
+            May you always have reasons to laugh,
+            people who genuinely love you, and courage
+            to chase everything your heart desires.
+            <br><br>
+            Never stop being the amazing person you are.
+            Keep shining, keep smiling and keep making
+            the world a little brighter!
+            <br><br>
+            You deserve all the happiness in the universe! 🦋
+        </p>
+        <button onclick="next(7)">One Last Surprise! 💝</button>
+    </div>
+</section>
+
+<!-- SCREEN 7 -->
+<section class="screen" id="s7">
+    <div class="emoji">🥹💗</div>
+    <h1>Once Again...</h1>
+    <h1 class="name">HAPPY BIRTHDAY DEESHA!</h1>
+    <p>
+        Here's to 24 years of being wonderful
+        and a lifetime of becoming even more amazing!
+    </p>
+    <h2>Lots of Love! 💕</h2>
+    <button onclick="next(1)">Replay Your Surprise 🔄</button>
+</section>
+
+<script>
+function next(number) {
+    document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.remove('active');
+    });
+
+    document.getElementById('s' + number).classList.add('active');
+
+    window.scrollTo(0,0);
+
+    if(number === 4) {
+        confetti();
+    }
+}
+
+function confetti() {
+    for(let i=0;i<80;i++) {
+        let heart = document.createElement('div');
+        heart.innerHTML = ['💗','💕','✨','🎉','🌸'][Math.floor(Math.random()*5)];
+        heart.className = 'heart';
+        heart.style.left = Math.random()*100+'vw';
+        heart.style.fontSize = (15+Math.random()*25)+'px';
+        heart.style.animationDuration = (3+Math.random()*5)+'s';
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(),8000);
+    }
+}
+
+// Floating hearts in the background
+setInterval(() => {
+    let heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '💗';
+    heart.style.left = Math.random()*100+'vw';
+    heart.style.fontSize = '20px';
+    heart.style.animationDuration = '7s';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(),7000);
+},500);
+</script>
+
+</body>
+</html>
